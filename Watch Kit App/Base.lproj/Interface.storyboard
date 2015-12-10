@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Menu-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Menu" id="AgC-eL-Hgc" customClass="SimonMenuVC" customModule="Watch_Kit_App_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Start Game" id="MnH-Al-Uhh">
+                            <connections>
+                                <action selector="startGame" destination="AgC-eL-Hgc" id="FZg-ay-g64"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="33.5" alignment="left" text="Game Over!" textAlignment="center" id="2OV-dt-DLT"/>
+                        <label width="136" height="38.5" alignment="left" text="Score:" textAlignment="center" id="Z5c-xP-c8e"/>
+                    </items>
+                    <connections>
+                        <outlet property="gameOverLbl" destination="2OV-dt-DLT" id="tds-bN-RzS"/>
+                        <outlet property="scoreLbl" destination="Z5c-xP-c8e" id="nEc-1r-2Z9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+        <!--Simon-->
+        <scene sceneID="ep1-od-3Gg">
+            <objects>
+                <controller identifier="SimonGameVC" title="Simon" id="Wu5-Sz-Vp0" customClass="SimonGameVC" customModule="Watch_Kit_App_Extension">
+                    <items>
+                        <separator alignment="left" id="mcT-aR-umN"/>
+                        <group width="1" height="50" alignment="left" id="xHR-ck-gX5">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" id="LQL-ku-Mxf">
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="uLAction" destination="Wu5-Sz-Vp0" id="bUK-Qt-yAc"/>
+                                    </connections>
+                                </button>
+                                <separator alignment="left" id="OhC-qQ-O39"/>
+                                <button width="0.5" height="1" alignment="left" id="7gM-f7-oa4">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="uRAction" destination="Wu5-Sz-Vp0" id="qHG-Dn-UuC"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="7cp-nf-0hb"/>
+                        <group width="1" height="50" alignment="left" id="FhZ-pa-Ark">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" id="RPA-c6-aeP">
+                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="lLAction" destination="Wu5-Sz-Vp0" id="aR2-ka-a6m"/>
+                                    </connections>
+                                </button>
+                                <separator alignment="left" id="cqN-Sw-tLs"/>
+                                <button width="0.5" height="1" alignment="left" id="chp-x2-05x">
+                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="lRAction" destination="Wu5-Sz-Vp0" id="pys-eZ-WgI"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="m9A-G4-7VL"/>
+                        <label width="136" height="30.5" alignment="left" text="Starting Game..." textAlignment="left" id="YV4-lX-FzG"/>
+                    </items>
+                    <connections>
+                        <outlet property="lLBtn" destination="RPA-c6-aeP" id="4x0-uh-fR1"/>
+                        <outlet property="lRBtn" destination="chp-x2-05x" id="vW2-kF-OAS"/>
+                        <outlet property="notifLbl" destination="YV4-lX-FzG" id="ksP-Nl-1ie"/>
+                        <outlet property="uLBtn" destination="LQL-ku-Mxf" id="t4J-lW-CpH"/>
+                        <outlet property="uRBtn" destination="7gM-f7-oa4" id="1c9-ek-xWE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="342" y="214.25"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Watch_Kit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="gv7-I2-MZq"/>
+                        <group alignment="left" id="eew-Gs-W6Y"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+    </scenes>
+</document>
